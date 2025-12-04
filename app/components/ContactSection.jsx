@@ -118,7 +118,7 @@ const ContactSection = () => {
               <input
                 type="hidden"
                 name="_next"
-                value="http://localhost:3001/?sent=1#contact"
+                value="https://portfolio-warith.vercel.app/?sent=1#contact"
               />
 
               <div>
