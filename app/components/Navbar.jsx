@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
 
 const navItems = [
@@ -10,14 +11,6 @@ const navItems = [
   { name: "Projets", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
-
-// const navItems = [
-//   { name: "Home", href: "#hero" },
-//   { name: "About", href: "#about" },
-//   { name: "Skills", href: "#skills" },
-//   { name: "Projects", href: "#projects" },
-//   { name: "Contact", href: "#contact" },
-// ];
 
 export default function Navbar({ darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,39 +28,48 @@ export default function Navbar({ darkMode, setDarkMode }) {
   return (
     <nav
       className={
-        "fixed top-0 left-0 w-full z-40 transition-all duration-300 " +
+        "fixed top-0 left-0 w-full z-40 transition-all duration-50 " +
         (isScrolled
           ? "py-3 dark:bg-gray-900/80 backdrop-blur-md shadow-md"
           : "py-5 bg-transparent")
       }
     >
-      <div className="text-gray-800 dark:text-white text-lg w-full px-10 md:px-20 flex items-center justify-between ">  
+       <div className=" text-lg w-full px-10 md:px-20 flex items-center justify-between ">
         <a
           className="text-xl font-extrabold  flex items-center"
           href="#hero"
         >
-          <span className="relative z-10">
-            <span className=" text-2xl text-light dark:text-dark">WD </span>
+
+          <span className="relative z-10 flex items-center gap-2">
+            <Image
+              src={darkMode ? "/logo-dark.png" : "/logo-light.png"}
+              alt="Logo"
+              width={40}            
+              height={40}           
+              className="object-contain"
+            />
+
+
             <span className="font-bold text-2xl">Portfolio</span>
-           
+
           </span>
         </a>
 
-       
+
         <div className="hidden md:flex items-center gap-8">
-         
+
           <div className="flex items-center gap-6">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className=" hover:text-teal-400 transition-colors duration-300 " /* couleur texte */
+                className="  hover:text-teal-400 transition-colors duration-300 " /* couleur texte */
               >
                 {item.name}
               </a>
             ))}
           </div>
-          
+
           {/* Toggle dark mode */}
           <button
             onClick={() => setDarkMode((prev) => !prev)}

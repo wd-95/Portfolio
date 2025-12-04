@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="relative text-gray-900 bg-sky-50 dark:bg-gray-900 px-10 md:px-20 lg:px-40">
+      <main className="relative bg-sky-50 dark:bg-gray-900 px-10 md:px-20 lg:px-40">
         <StarBackground />
 
         <section>
