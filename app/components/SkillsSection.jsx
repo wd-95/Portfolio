@@ -4,30 +4,38 @@ import Image from "next/image";
 
 
 const skills = [
-  // Frontend
-  { name: "HTML5", category: "frontend", icon: "/icon/html.png" },
-  { name: "CSS3", category: "frontend", icon: "/icon/css.png" },
-  { name: "JavaScript", category: "frontend", icon: "/icon/js.png" },
-  { name: "React", category: "frontend", icon: "/icon/react.png" },
+  // frontend
+  { name: "HTML5",        category: "frontend", icon: "/icon/html.png" },
+  { name: "CSS3",         category: "frontend", icon: "/icon/css.png" },
+  { name: "JavaScript",   category: "frontend", icon: "/icon/js.png" },
+  { name: "React",        category: "frontend", icon: "/icon/react.png" },
   { name: "Tailwind CSS", category: "frontend", icon: "/icon/tailwind.png" },
-  { name: "Next.js", category: "frontend", icon: "/icon/next-js.webp" },
+  { name: "Next.js",      category: "frontend", icon: "/icon/next-js.webp" },
 
-  // Backend
-  { name: "Node.js", category: "backend", icon: "/icon/nodejs.svg" },
-  { name: "Express", category: "backend", icon: "/icon/express.png" },
-  { name: "Java", category: "backend", icon: "/icon/java.png" },
-  { name: "MySQL", category: "backend", icon: "/icon/mysql.png" },
+  // backend (app / API)
+  { name: "Node.js",      category: "backend",  icon: "/icon/nodejs.svg" },
+  { name: "Express",      category: "backend",  icon: "/icon/express.png" },
+  { name: "Java",         category: "backend",  icon: "/icon/java.png" },
+  { name: "Python",       category: "backend",  icon: "/icon/python.png" },
 
+  // data & BI
+  { name: "MySQL",        category: "data-bi",  icon: "/icon/mysql.png" },
+  { name: "PostgreSQL",   category: "data-bi",  icon: "/icon/postgre.png" },
+  { name: "MariaDB",      category: "data-bi",  icon: "/icon/mariadb.png" },
+  { name: "PowerBI",      category: "data-bi",  icon: "/icon/powerbi.svg" },
+  { name: "Excel",        category: "data-bi",  icon: "/icon/excel.svg" },
 
-  // Tools
-  { name: "Git/GitHub", category: "tools", icon: "/icon/github.png" },
-  { name: "PowerBi", category: "tools", icon: "/icon/powerbi.svg" },
-  { name: "Excel", category: "tools", icon: "/icon/excel.svg" },
-  { name: "VS Code", category: "tools", icon: "/icon/vscode.svg" },
-  { name: "Linux", category: "tools", icon: "/icon/linux.svg" },
+  // devops & tools
+  { name: "Git/GitHub",         category: "devops & tools", icon: "/icon/github.png" },
+  { name: "Linux",              category: "devops & tools", icon: "/icon/linux.svg" },
+  { name: "Docker",             category: "devops & tools", icon: "/icon/docker.svg" },
+  { name: "VS Code",            category: "devops & tools", icon: "/icon/vscode.svg" },
+  { name: "Jenkins",            category: "devops & tools", icon: "/icon/jenkins.png" },
+  { name: "Cisco Packet Tracer", category: "devops & tools", icon: "/icon/cisco-packet-tracer.png" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "frontend", "backend", "data-bi", "devops & tools"];
+
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -57,19 +65,19 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-6 lg:grid-cols-5 lg:gap-0">
           {filteredSkills.map((skill) => (
             <div
               key={skill.name}
               className=" p-6 flex flex-col items-center gap-3"
             >
               {/* cercle + icon */}
-              <div className="w-26 h-26 rounded-full border-2 border-light dark:border-dark flex items-center justify-center overflow-hidden card-hover ">
+              <div className="w-20 h-20 rounded-full border-2 border-light dark:border-dark flex items-center justify-center overflow-hidden card-hover ">
                 <Image
                   src={skill.icon}
                   alt={skill.name}
-                  width={80}
-                  height={80}
+                  width={60}
+                  height={60}
                   className="object-contain rounded-full"
                 />
               </div>
