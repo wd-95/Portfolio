@@ -24,6 +24,9 @@ const skills = [
   { name: "MariaDB",      category: "data-bi",  icon: "/icon/mariadb.png" },
   { name: "PowerBI",      category: "data-bi",  icon: "/icon/powerbi.svg" },
   { name: "Excel",        category: "data-bi",  icon: "/icon/excel.svg" },
+  { name: "VBA",        category: "data-bi",  icon: "/icon/vba.png" },
+  { name: "Gsheet",        category: "data-bi",  icon: "/icon/gsheet2.png" },
+
 
   // devops & tools
   { name: "Git/GitHub",         category: "devops & tools", icon: "/icon/github.png" },
@@ -32,6 +35,8 @@ const skills = [
   { name: "VS Code",            category: "devops & tools", icon: "/icon/vscode.svg" },
   { name: "Jenkins",            category: "devops & tools", icon: "/icon/jenkins.png" },
   { name: "Cisco Packet Tracer", category: "devops & tools", icon: "/icon/cisco-packet-tracer.png" },
+  { name: "Jira",                category: "devops & tools", icon: "/icon/jira.png" },
+
 ];
 
 const categories = ["all", "frontend", "backend", "data-bi", "devops & tools"];
