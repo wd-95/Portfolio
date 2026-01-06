@@ -12,7 +12,7 @@ import Footer from "./components/Footer.jsx";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

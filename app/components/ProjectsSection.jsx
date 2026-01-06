@@ -19,8 +19,8 @@ const projects = [
             "Un jeu 2d d’action en arène où le joueur affronte des vagues d’ennemis toujours plus puissants.",
         image: "/projects/project3.png",
         tags: ["Java", "libGDX"],
-        demoUrl: "#",
-        githubUrl: "#",
+        demoUrl: "https://github.com/wd-95/",
+        githubUrl: "https://github.com/wd-95/",
     },
        
     {
@@ -29,8 +29,8 @@ const projects = [
         description: "Jeu du pendu sur terminal en Python.",
         image: "/projects/project1.png",
         tags: ["Python"],
-        demoUrl: "#",
-        githubUrl: "#",
+        demoUrl: "https://github.com/wd-95/",
+        githubUrl: "https://github.com/wd-95/",
     },
 
 
