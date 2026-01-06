@@ -1,4 +1,6 @@
 import Image from "next/image";
+import  {FiExternalLink, FiGithub} from "react-icons/fi";
+
 const projects = [
       {
         id: 1,
@@ -7,8 +9,8 @@ const projects = [
             "Job Board - Plateforme de publication d’offres d’emploi avec gestion des utilisateurs et authentification.",
         image: "/projects/project2.png",
         tags: ["JavaScript", "React", "Node.js", "Express", "MySQL"],
-        demoUrl: "#",
-        githubUrl: "#",
+        demoUrl: "https://1-2-job.vercel.app/",
+        githubUrl: "https://github.com/wd-95/1-2-job",
     },
        {
         id: 2,
@@ -37,7 +39,7 @@ const projects = [
 export const ProjectsSection = () => {
     return (
         <section id="projects" className="py-24 px-8 md:px-0 relative">
-            <div className="container mx-auto max-w-5xl">
+            <div className="container mx-auto max-w-7xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center dark:text-white">
                     {" "}
                     Mes <span className="dark:text-dark text-light"> Projets </span>
@@ -51,7 +53,7 @@ export const ProjectsSection = () => {
                     {projects.map((project) => (
                         <div 
                             key={project.id}
-                            className="dark:bg-gray-800/30  rounded-lg overflow-hidden shadow-xl card-hover group "
+                            className="dark:bg-gray-800/30  rounded-lg overflow-hidden shadow-xl card-hover group flex flex-col h-full "
                         >
                             <div className="h-48 overflow-hidden relative">
                                 <Image
@@ -62,26 +64,29 @@ export const ProjectsSection = () => {
                                 />
                             </div>
 
-                            <div className="p-6 ">
+                            <div className="p-6 flex flex-col flex-1 ">
+                             <div className="flex-grow">
                                 <div className="flex flex-wrap gap-2 mb-4 ">
                                     {project.tags.map((tag,i) => (
                                         <span key={`${project.id}-tag-${i}`} className="px-2 py-1 text-xs font-medium border rounded-full dark:text-white dark:bg-gray-800/90 dark:border-gray-200/10 border-gray-200">
                                             {tag}
                                         </span>
                                     ))}
-                                </div>
+                               </div>
 
                                 <h3 className="text-xl font-semibold mb-1 dark:text-white"> {project.title}</h3>
                                 <p className="text-muted-foreground text-sm mb-4">
                                     {project.description}
                                 </p>
-                                <div className="flex justify-between items-center">
+                              </div>
+                                <div className="flex justify-between items-center pt-4">
                                     <div className="flex space-x-3">
                                         <a
                                             href={project.demoUrl}
                                             target="_blank"
                                             className="text-foreground/80 hover:text-light transition-colors duration-300"
                                         >
+                                            <FiExternalLink size={20} />
 
                                         </a>
                                         <a
@@ -89,12 +94,13 @@ export const ProjectsSection = () => {
                                             target="_blank"
                                             className="text-foreground/80 hover:text-light transition-colors duration-300"
                                         >
+                                             <FiGithub size={20} />
 
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                         </div>
                     ))}
                 </div>
 
