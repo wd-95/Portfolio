@@ -60,7 +60,7 @@ export const ProjectsSection = () => {
                                     src={project.image}
                                     alt={project.title}
                                     fill
-                                    className=" w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    className=" w-full h-full object-fill transition-transform duration-500 group-hover:scale-110"
                                 />
                             </div>
 
